@@ -4,6 +4,7 @@ local M = {
     "nvim-treesitter/nvim-treesitter",
     -- general tests
     "vim-test/vim-test",
+    "nvim-neotest/nvim-nio",
     "nvim-neotest/neotest-vim-test",
     -- language specific tests
     "marilari88/neotest-vitest",

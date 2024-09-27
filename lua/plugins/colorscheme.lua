@@ -5,6 +5,7 @@ local M = {
 }
 
 function M.config()
+
   vim.cmd.colorscheme "darkplus"
 end
 

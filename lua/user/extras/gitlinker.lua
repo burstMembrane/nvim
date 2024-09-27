@@ -6,7 +6,7 @@ local M = {
 
 function M.config()
   local wk = require "which-key"
-  wk.register {
+  wk.add {
     ["<leader>gy"] = { "<cmd>GitLink!<cr>", "Git link" },
     ["<leader>gY"] = { "<cmd>GitLink blam<cr>", "Git link blame" },
   }

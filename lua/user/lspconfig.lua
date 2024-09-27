@@ -40,7 +40,7 @@ end
 
 function M.config()
   local wk = require "which-key"
-  wk.register {
+  wk.add {
     ["<leader>la"] = { "<cmd>lua vim.lsp.buf.code_action()<cr>", "Code Action" },
     ["<leader>lf"] = {
       "<cmd>lua vim.lsp.buf.format({async = true, filter = function(client) return client.name ~= 'typescript-tools' end})<cr>",
@@ -55,7 +55,7 @@ function M.config()
     ["<leader>lr"] = { "<cmd>lua vim.lsp.buf.rename()<cr>", "Rename" },
   }
 
-  wk.register {
+  wk.add {
     ["<leader>la"] = {
       name = "LSP",
       a = { "<cmd>lua vim.lsp.buf.code_action()<cr>", "Code Action", mode = "v" },

@@ -9,7 +9,11 @@ local M = {
 function M.config()
   local lsp = require("lsp-zero")
 	lsp.preset("recommended")
+  local servers = {
+"gopls"
 
+
+  }
 	require("lsp-zero").setup()
 
 	require("mason-lspconfig").setup_handlers {

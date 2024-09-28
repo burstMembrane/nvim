@@ -5,7 +5,6 @@ local M = {
   },
 }
 
-
 function M.config()
   local servers = {
     "lua_ls",
@@ -13,6 +12,7 @@ function M.config()
     "html",
     "ts_ls",
     "pyright",
+    "gopls",
     "bashls",
     "jsonls",
   }

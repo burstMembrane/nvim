@@ -1,2 +1,2 @@
-require("liam.settings")
-require("liam.lazy")
+require "liam.settings"
+require "liam.lazy"

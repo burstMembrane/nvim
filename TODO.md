@@ -1,13 +1,19 @@
 # NVIM Config
 
-## Liam Power
+This document outlines my ongoing journey with a ideal neovim setup. 
+In an attempt to get better at using the CLI to manage, find and write code - 
+I will be switching over to nvim for some personal projects.
 
-[ ] Figure out how to show errors on hover with the LSP
-[ ] Setup format on save
-[ ] Create/save/switch files quickly
-[ ] Setup integrated terminal
-[ ] Lookup docs on cmd + ctrl + alt keybinds 
-[ ] Setup LSP keybinds
-[ ] Setup copilot
+It has long been a intention of mine to get more comfortable and flexible with my CLI environment. 
+This repo will serve as a rekindling of my bare love of coding, and I will be working to update this config with the minimal possible set of tools to efficiently code.
 
+## Config Roadmap
 
+[x] Syntax Highlighting `treesitter`
+[x] Completion
+[x] Quickly find files
+[ ] Quickly create and navigate new files
+[ ] Port over some keybinds from vscode
+[ ] Linting and compiler errors in Rust, Python & Go
+[ ] Optional copilot/Completion
+[x] Inline Terminal/Split view easily switchable

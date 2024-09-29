@@ -12,6 +12,7 @@ This repo will serve as a rekindling of my bare love of coding, and I will be wo
 [x] Syntax Highlighting `treesitter`
 [x] Completion
 [x] Quickly find files
+[ ] Bracket highlighting
 [ ] Quickly create and navigate new files
 [ ] Figure out how to move lines up without cut and paste
 [ ] Figure out how to move back a word in a line

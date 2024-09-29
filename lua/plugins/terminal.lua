@@ -5,7 +5,8 @@ local M = {
 function M.config()
   local wk = require "which-key"
   wk.add {
-    { "<leader>t", "<cmd>ToggleTerm<CR>", desc = "Toggle Terminal" },
+    --   { "<leader>t", "<cmd>ToggleTerm<CR>", desc = "Toggle Terminal" },
+    { "<c>t", "<cmd>ToggleTerm<CR>", desc = "Toggle Terminal" },
   }
 
   local toggleterm = require("toggleterm")
@@ -18,8 +19,6 @@ function M.config()
     shading_factor = 2,
     start_in_insert = true,
     insert_mappings = true, -- whether or not the open mapping applies in insert mode
-
-
   })
 end
 

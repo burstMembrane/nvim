@@ -14,5 +14,7 @@ local M = {
     "hrsh7th/cmp-nvim-lua",
   },
 }
+function M.config()
+end
 
 return M

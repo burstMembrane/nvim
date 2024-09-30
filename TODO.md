@@ -12,11 +12,12 @@ This repo will serve as a rekindling of my bare love of coding, and I will be wo
 [x] Syntax Highlighting `treesitter`
 [x] Completion
 [x] Quickly find files
-[ ] Bracket highlighting
-[ ] Quickly create and navigate new files
-[ ] Figure out how to move lines up without cut and paste
-[ ] Figure out how to move back a word in a line
-[ ] Port over some keybinds from vscode
+[x] Inline Terminal/Split view easily switchable
+[x] Quickly create and navigate new files (this is covered with oil and nvimtree)
+[x] Figure out how to move lines up without cut and paste (alt+up,down)
+[x] Figure out how to move back a word in a line `b`ack
+[x] Bracket highlighting (pending with rainbow-delimiters --- need to make pretty with color scheme
+[x] Port over some keybinds from vscode
+[ ] Telescope plugin to find directories in home for quick code opening
 [ ] Linting and compiler errors in Rust, Python & Go
 [ ] Optional copilot/Completion
-[x] Inline Terminal/Split view easily switchable

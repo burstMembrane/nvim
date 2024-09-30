@@ -1,16 +1,10 @@
-
 local M = {
--- Put the lazy.nvim setup here
-
+  -- Put the lazy.nvim setup here
 }
-
 
 function M.config()
 
--- Put plugin conf here
-
-
+  -- Put plugin conf here
 end
-
 
 return M

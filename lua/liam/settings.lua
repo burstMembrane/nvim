@@ -27,12 +27,3 @@ o.inccommand = "split" -- When nonempty, shows the effects of :substitute, :smag
 o.splitright = true
 o.splitbelow = true -- When on, splitting a window will put the new window below the current one
 o.termguicolors = true
-
--- KEYMAPS
--- mousemenu
-vim.keymap.set("n", "<RightMouse>", "<cmd>:popup mousemenu<CR>")
-vim.keymap.set("n", "<Tab>", "<cmd>:popup mousemenu<CR>")
--- Alt+Up moves line up
--- Alt+Down movees line down
-vim.keymap.set("n", "<M-Up>", "ddkP", { noremap = false, silent = true })
-vim.keymap.set("n", "<M-Down>", "ddp", { noremap = false, silent = true })

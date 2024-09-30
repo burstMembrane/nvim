@@ -3,12 +3,24 @@ local M = {
   "folke/which-key.nvim",
 }
 
+-- Global function to show diagnostics for the word under the cursor
+_G.show_diagnostics = function()
+  local diagnostics = vim.diagnostic.get(0, { lnum = vim.fn.line "." - 1 })
+  if #diagnostics > 0 then
+    vim.diagnostic.open_float(0, { scope = "line" })
+  else
+    print "No diagnostics found under cursor"
+  end
+end
+
 function M.config()
   local wk = require "which-key"
+
   wk.add {
-    { "<leader>q", "<cmd>q<cr>", desc = "Quit" }, -- no need to specify mode since it's inherited
-    { "<leader>w", "<cmd>w<cr>", desc = "Write" },
-    { "<leader>o", "<cmd>e<cr>", desc = "Open" },
+    { "<leader>q", "<cmd>q<cr>", desc = "Quit" }, -- Quit
+    { "<leader>w", "<cmd>w<cr>", desc = "Write" }, -- Write
+    { "<leader>o", "<cmd>e<cr>", desc = "Open" }, -- Open file
+    { "<leader>d", "<cmd>lua show_diagnostics()<cr>", desc = "show error or warning under cursor" }, -- Show diagnostics
   }
 end
 

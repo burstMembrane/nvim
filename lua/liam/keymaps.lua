@@ -7,6 +7,8 @@ vim.keymap.set("n", "<Tab>", "<cmd>:popup mousemenu<CR>")
 -- Alt+Down movees line down
 vim.keymap.set("n", "<M-Up>", "ddkP", { noremap = false, silent = true })
 vim.keymap.set("n", "<M-Down>", "ddp", { noremap = false, silent = true })
+vim.keymap.set("n", "<C-S-Up>", "ddKP", { noremap = false, silent = true })
+vim.keymap.set("n", "<C-S-Down>", "ddp", { noremap = false, silent = true })
 -- set CTRL a to select all
 vim.api.nvim_set_keymap("n", "<C-a>", "ggVG", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("n", "<C-x>", "x", { noremap = true, silent = true })

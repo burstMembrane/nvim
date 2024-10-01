@@ -19,5 +19,6 @@ This repo will serve as a rekindling of my bare love of coding, and I will be wo
 [x] Bracket highlighting (pending with rainbow-delimiters --- need to make pretty with color scheme
 [x] Port over some keybinds from vscode
 [ ] Telescope plugin to find directories in home for quick code opening
-[ ] Linting and compiler errors in Rust, Python & Go
+[x] Linting and compiler errors in Rust, Python & Go
+[ ] Git diffing and proper git view
 [ ] Optional copilot/Completion

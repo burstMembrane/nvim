@@ -20,5 +20,5 @@ This repo will serve as a rekindling of my bare love of coding, and I will be wo
 [x] Port over some keybinds from vscode
 [ ] Telescope plugin to find directories in home for quick code opening
 [x] Linting and compiler errors in Rust, Python & Go
-[ ] Git diffing and proper git view
+[x] Git diffing and proper git view via lazygit
 [ ] Optional copilot/Completion

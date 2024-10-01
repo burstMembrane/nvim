@@ -18,3 +18,6 @@ vim.api.nvim_set_keymap("n", "<C-d>", "yyp", { noremap = false, silent = true })
 vim.api.nvim_set_keymap("v", "<C-S-c>", '"+y', { noremap = false, silent = true })
 vim.api.nvim_set_keymap("n", "<C-S-p>", '"+p', { noremap = false, silent = true })
 vim.api.nvim_set_keymap("n", "<C-z>", '"u', { noremap = false, silent = true })
+
+-- set CTRL+SHIFT+X to cut
+vim.api.nvim_set_keymap("v", "<C-S-x>", '"+d', { noremap = false, silent = true })

@@ -28,7 +28,6 @@ _G.toggle_inlay_hints = function()
   vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled())
   -- show display text
 end
-
 function M.config()
   local wk = require "which-key"
 
@@ -42,7 +41,7 @@ function M.config()
     { "<leader>cw", "<cmd>BufferClose<cr>", desc = "Close Current Window (Tab)" },
     { "<leader>ti", "<cmd>lua toggle_inlay_hints()<cr>", desc = "Toggle LSP Inlay Hints" },
     { "<leader>tm", "<cmd>lua toggle_inline_virtual_text()<cr>", desc = "Toggle LSP Virtual Text" },
-    { "<leader>ai", "<cmd>lua require('copilot.suggestion').toggle_auto_trigger()<CR>", desc = "Toggle Copilot" },
+    { "<leader>ai", "<cmd>Copilot toggle<CR>", desc = "Toggle Copilot" },
   }
 end
 

@@ -4,7 +4,7 @@ local M = {
   dependencies = {
     -- LSP support
     "neovim/nvim-lspconfig",
-            "SmiteshP/nvim-navbuddy",
+    "SmiteshP/nvim-navbuddy",
     -- Autocompletetion
     "hrsh7th/nvim-cmp",
     "hrsh7th/cmp-buffer",

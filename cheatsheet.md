@@ -39,8 +39,7 @@ As an iterative approach when I find myself doing a lot of keypresses to do some
 `:q!` to quit without saving
 
 ### Open terminal
-`-` with termtoggle to get an integrated shell
-
+`Ctrl+\` with termtoggle to get an integrated shell
 
 ### Manipulate windows/tabs
 

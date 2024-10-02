@@ -22,3 +22,6 @@ vim.api.nvim_set_keymap("v", "<C-S-x>", '"+d', { noremap = false, silent = true 
 -- ~/.config/nvim/after/plugin/keymaps.lua
 vim.keymap.set("n", "<C-p>", "<cmd>Telescope find_files<CR>", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("n", "<C-p>", "<cmd>Telescope find_files<CR>", { noremap = true, silent = true })
+
+-- add C-S-f for find in file (current buffer)
+vim.api.nvim_set_keymap("n", "<C-f>", "<cmd>Telescope current_buffer_fuzzy_find<CR>", { noremap = true, silent = true })

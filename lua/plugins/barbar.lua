@@ -43,7 +43,7 @@ function M.config()
   --                 :BufferCloseBuffersLeft
   --                 :BufferCloseBuffersRight
   -- Magic buffer-picking mode
-  map("n", "<C-p>", "<Cmd>BufferPick<CR>", opts)
+  map("n", "<C-S-p>", "<Cmd>BufferPick<CR>", opts)
   -- Sort automatically by...
   map("n", "<Space>bb", "<Cmd>BufferOrderByBufferNumber<CR>", opts)
   map("n", "<Space>bn", "<Cmd>BufferOrderByName<CR>", opts)

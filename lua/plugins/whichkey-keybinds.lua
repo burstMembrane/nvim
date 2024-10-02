@@ -1,5 +1,4 @@
 local M = {
-
   "folke/which-key.nvim",
 }
 -- Global function to show diagnostics for the word under the cursor

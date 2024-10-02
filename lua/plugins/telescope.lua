@@ -12,10 +12,9 @@ function M.config()
   wk.add {
     { "<leader>f", group = "Find" },
     { "<leader>ff", "<cmd>Telescope find_files<CR>", desc = "Find Files", mode = "n" },
-    { "<leader>fe", "<cmd>Telescope current_buffer_fuzzy_find<CR>", desc = "Find Text (Current Buffer)" },
     { "<leader>fs", "<cmd>Telescope treesitter<CR>", desc = "Find Symbols" },
     { "<leader>ft", "<cmd>Telescope live_grep<CR>", desc = "Find Text (CWD)" },
-    { "<leader>fb", "<cmd>Telescope file_browser<CR>", desc = "File Browser" },
+    { "<leader>fb", "<cmd>Telescope current_buffer_fuzzy_find<CR>", desc = "Find Text (Current Buffer)" },
     { "<leader>fr", "<cmd>Telescope oldfiles<CR>", desc = "Find Recent Files" },
     { "<leader>fh", "<cmd>Telescope help_tags<CR>", desc = "Find Help" },
   }

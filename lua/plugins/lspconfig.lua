@@ -15,6 +15,17 @@ local M = {
   },
 }
 function M.config()
+  --  local lsp = require("lsp-zero").preset {}
+  --
+  require("lspconfig").lua_ls.setup {
+    settings = {
+      Lua = {
+        diagnostics = {
+          globals = { "vim" },
+        },
+      },
+    },
+  }
 end
 
 return M

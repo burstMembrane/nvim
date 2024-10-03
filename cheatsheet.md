@@ -31,6 +31,9 @@ As an iterative approach when I find myself doing a lot of keypresses to do some
 `x` to cut
 `b` to go back a word
 `c` to change combined with operators
+`yy` to yank a whole line
+`yykP` to yank a line and paste it up 
+`yykp` to dupe a line
 
 ### Commands
 

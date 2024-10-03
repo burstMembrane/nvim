@@ -20,5 +20,5 @@ This repo will serve as a rekindling of my bare love of coding, and I will be wo
 [x] Linting and compiler errors in Rust, Python & Go
 [x] Git diffing and proper git view via lazygit
 [x] Optional copilot/Completion
-[ ] hard mode -- no remaps for arrow keys
+[x] hard mode -- no remaps for arrow keys
 [ ] Telescope plugin to find directories and find recent directories in home for quick code opening

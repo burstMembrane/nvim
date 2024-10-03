@@ -25,3 +25,7 @@ vim.api.nvim_set_keymap("n", "<C-p>", "<cmd>Telescope find_files<CR>", { noremap
 
 -- add C-S-f for find in file (current buffer)
 vim.api.nvim_set_keymap("n", "<C-f>", "<cmd>Telescope current_buffer_fuzzy_find<CR>", { noremap = true, silent = true })
+
+-- set paste to last yanked, not last deleted
+vim.api.nvim_set_keymap("n", "p", "\"0p", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "P", "\"0P", { noremap = true, silent = true })

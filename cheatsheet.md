@@ -44,3 +44,8 @@ As an iterative approach when I find myself doing a lot of keypresses to do some
 ### Manipulate windows/tabs
 
 `Ctrl-W` open help for windows
+`C-w w` to switch windows
+`C-w h` move to left window
+`C-w l` move to right window
+`C-w v` open vertical window (vertical split)
+`C-w s` split horizontally

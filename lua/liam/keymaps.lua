@@ -31,4 +31,8 @@ vim.api.nvim_set_keymap("n", "<Up>", "<Nop>", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("n", "<Down>", "<Nop>", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("n", "<Left>", "<Nop>", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("n", "<Right>", "<Nop>", { noremap = true, silent = true })
--- cycle windows with leader + cw
+-- map enter to enter newline in normal mode
+vim.api.nvim_set_keymap("n", "<CR>", "o<ESC>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<S-CR>", "O<ESC>", { noremap = true, silent = true })
+-- map backspace to delete a newline in normal mode if cursor is at the beginning of the line
+vim.api.nvim_set_keymap("n", "<BS>", "ddk", { noremap = true, silent = true })

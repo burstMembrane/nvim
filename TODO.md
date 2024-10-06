@@ -21,6 +21,6 @@ This repo will serve as a rekindling of my bare love of coding, and I will be wo
 [x] Git diffing and proper git view via lazygit
 [x] Optional copilot/Completion
 [x] hard mode -- no remaps for arrow keys
-[ ] Learn split windows etc
+[x] Learn split windows etc
 [ ] Telescope plugin to find directories and find recent directories in home for quick code opening
 

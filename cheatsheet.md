@@ -10,19 +10,19 @@ As an iterative approach when I find myself doing a lot of keypresses to do some
 ### Finding files
 
 `-` for opening parent directory
-*N.B* Once opened -- can create, delete files and directories in text editing more
+*n.b* once opened -- can create, delete files and directories in text editing more
 `<leader>e` for opening file tree
 `<leader>ff` for fuzzy search for files
 `:e myfile.txt` for editing a file named `myfile.txt` in the current window
 
 
-### Editing text
+### editing text
 
 `dd` remove line
 `cw` change word
 `hjkl` for navigating
 `o` to `o`pen a line of text below cursor (and enter insert mode) 
-`O` for below
+`o` for below
 `$` end of current line
 `e` end of next word
 `w` start of next word
@@ -34,7 +34,7 @@ As an iterative approach when I find myself doing a lot of keypresses to do some
 `yy` to yank a whole line
 `yykP` to yank a line and paste it up 
 `yykp` to dupe a line
-
+`v` for selecting a block, `V` to quick select a line
 ### Commands
 
 `:w` to save

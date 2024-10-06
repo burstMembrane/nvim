@@ -14,7 +14,7 @@ M.config = function()
   end
   map('n', '<leader>tb', gitsigns.toggle_current_line_blame)
   map('n', '<leader>hd', gitsigns.diffthis)
-
+  map('n', '<leader>gp', gitsigns.preview_hunk)
   require("gitsigns").setup {
     signs = {
       add = {

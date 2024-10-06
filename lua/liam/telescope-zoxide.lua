@@ -1,9 +1,9 @@
-local pickers = require "telescope.pickers"
-local finders = require "telescope.finders"
-local conf = require("telescope.config").values
-local previewers = require "telescope.previewers"
-
 local telescope_z = function(opts)
+  local pickers = require "telescope.pickers"
+  local finders = require "telescope.finders"
+  local conf = require("telescope.config").values
+  local previewers = require "telescope.previewers"
+
   local directory_previewer = previewers.new_termopen_previewer {
     get_command = function(entry, _)
       return { "fd", ".", entry.value }

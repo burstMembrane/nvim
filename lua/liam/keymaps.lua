@@ -26,11 +26,13 @@ vim.api.nvim_set_keymap("n", "<C-p>", "<cmd>Telescope find_files<CR>", { noremap
 -- add C-S-f for find in file (current buffer)
 vim.api.nvim_set_keymap("n", "<C-f>", "<cmd>Telescope current_buffer_fuzzy_find<CR>", { noremap = true, silent = true })
 
--- set paste to last yanked, not last deleted
-vim.api.nvim_set_keymap("n", "p", "\"0p", { noremap = true, silent = true })
-vim.api.nvim_set_keymap("n", "P", "\"0P", { noremap = true, silent = true })
 -- hard mode - remove all arrow keymaps
 vim.api.nvim_set_keymap("n", "<Up>", "<Nop>", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("n", "<Down>", "<Nop>", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("n", "<Left>", "<Nop>", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("n", "<Right>", "<Nop>", { noremap = true, silent = true })
+-- map enter to enter newline in normal mode
+vim.api.nvim_set_keymap("n", "<CR>", "o<ESC>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<S-CR>", "O<ESC>", { noremap = true, silent = true })
+-- map backspace to delete a newline in normal mode if cursor is at the beginning of the line
+vim.api.nvim_set_keymap("n", "<BS>", "ddk", { noremap = true, silent = true })

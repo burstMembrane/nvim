@@ -17,7 +17,7 @@ function M.config()
       hide_during_completion = true,
       debounce = 75,
       keymap = {
-        accept = "<C-Right>",
+        accept = "<c-i>",
         accept_word = false,
         accept_line = false,
         next = "<M-]>",
@@ -37,8 +37,17 @@ function M.config()
       },
     },
   }
+
   local opts = { noremap = true, silent = true }
   vim.api.nvim_set_keymap("n", "<c-s>", ":lua require('copilot.suggestion').toggle_auto_trigger()<CR>", opts)
+
+  vim.keymap.set("i", "<Tab>", function()
+    if require("copilot.suggestion").is_visible() then
+      require("copilot.suggestion").accept()
+    else
+      vim.api.nvim_feedkeys(vim.api.nvim_replace_termcodes("<Tab>", true, false, true), "n", false)
+    end
+  end, { desc = "Super Tab" })
 end
 
 return M

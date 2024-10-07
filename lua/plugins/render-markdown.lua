@@ -4,6 +4,14 @@ local M = {
   dependencies = { "nvim-treesitter/nvim-treesitter", "echasnovski/mini.icons" }, -- if you use standalone mini plugins
 }
 
-function M.config() end
+function M.config()
+  require("render-markdown").setup {
+    checkbox = {
+      unchecked = { icon = "✘ " },
+      checked = { icon = "✔ " },
+      custom = { todo = { rendered = "◯ " } },
+    },
+  }
+end
 
 return M

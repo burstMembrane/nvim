@@ -3,7 +3,6 @@ local M = {
   event = "VimEnter",
 }
 
-
 function M.config()
   local dashboard = require "alpha.themes.dashboard"
   local icons = require "user.icons"
@@ -32,7 +31,6 @@ function M.config()
   local function footer()
     return "liampower.dev"
   end
-
 
   dashboard.section.footer.val = footer()
   dashboard.section.header.opts.hl = "Keyword"

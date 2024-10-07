@@ -15,7 +15,7 @@ This repo will serve as a rekindling of my bare love of coding, and I will be wo
 [x] Inline Terminal/Split view easily switchable
 [x] Quickly create and navigate new files (this is covered with oil and nvimtree)
 [x] Figure out how to move lines up without cut and paste (alt+up,down)
-[x] Bracket highlighting (pending with rainbow-delimiters --- need to make pretty with color scheme
+[x] Bracket highlighting (pending with rainbow-delimiters --- need to make pretty with color scheme)
 [x] Port over some keybinds from vscode
 [x] Linting and compiler errors in Rust, Python & Go
 [x] Git diffing and proper git view via lazygit

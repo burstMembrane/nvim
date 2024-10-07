@@ -5,17 +5,9 @@ local M = {
 }
 M.config = function()
   local icons = require "user.icons"
-  local wk = require "which-key"
   local gitsigns = require "gitsigns"
-  local function map(mode, l, r, opts)
-    opts = opts or {}
-    opts.buffer = bufnr
-    vim.keymap.set(mode, l, r, opts)
-  end
-  map('n', '<leader>tb', gitsigns.toggle_current_line_blame)
-  map('n', '<leader>hd', gitsigns.diffthis)
 
-  require("gitsigns").setup {
+  gitsigns.setup {
     signs = {
       add = {
         text = icons.ui.BoldLineMiddle,

@@ -17,7 +17,7 @@ function M.config()
       hide_during_completion = true,
       debounce = 75,
       keymap = {
-        accept = "<M-l>",
+        accept = "<Tab>",
         accept_word = false,
         accept_line = false,
         next = "<M-]>",
@@ -37,6 +37,7 @@ function M.config()
       },
     },
   }
+
   local opts = { noremap = true, silent = true }
   vim.api.nvim_set_keymap("n", "<c-s>", ":lua require('copilot.suggestion').toggle_auto_trigger()<CR>", opts)
 end

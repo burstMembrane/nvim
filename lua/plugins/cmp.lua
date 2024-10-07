@@ -44,10 +44,6 @@ function M.config()
   local luasnip = require "luasnip"
   require("luasnip/loaders/from_vscode").lazy_load()
 
-  vim.api.nvim_set_hl(0, "CmpItemKindCopilot", { fg = "#6CC644" })
-  vim.api.nvim_set_hl(0, "CmpItemKindTabnine", { fg = "#CA42F0" })
-  vim.api.nvim_set_hl(0, "CmpItemKindEmoji", { fg = "#FDE030" })
-
   local check_backspace = function()
     local col = vim.fn.col "." - 1
     return col == 0 or vim.fn.getline("."):sub(col, col):match "%s"
@@ -85,10 +81,8 @@ function M.config()
           luasnip.expand_or_jump()
         elseif check_backspace() then
           fallback()
-          -- require("neotab").tabout()
         else
           fallback()
-          -- require("neotab").tabout()
         end
       end, {
         "i",
@@ -119,17 +113,6 @@ function M.config()
           path = "",
           emoji = "",
         })[entry.source.name]
-
-        if entry.source.name == "emoji" then
-          vim_item.kind = icons.misc.Smiley
-          vim_item.kind_hl_group = "CmpItemKindEmoji"
-        end
-
-        if entry.source.name == "cmp_tabnine" then
-          vim_item.kind = icons.misc.Robot
-          vim_item.kind_hl_group = "CmpItemKindTabnine"
-        end
-
         return vim_item
       end,
     },
@@ -157,7 +140,7 @@ function M.config()
       },
     },
     experimental = {
-      ghost_text = false,
+      ghost_text = true,
     },
   }
 end

@@ -1,5 +1,4 @@
 local global = vim.g
-local keymap = vim.keymap.set
 local o = vim.opt
 
 -- Editor options

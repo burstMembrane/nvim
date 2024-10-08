@@ -9,20 +9,22 @@ This repo will serve as a rekindling of my bare love of coding, and I will be wo
 
 ## Config Roadmap
 
-[x] Syntax Highlighting `treesitter`
-[x] Completion
-[x] Quickly find files
-[x] Inline Terminal/Split view easily switchable
-[x] Quickly create and navigate new files (this is covered with oil and nvimtree)
-[x] Figure out how to move lines up without cut and paste (alt+up,down)
-[x] Bracket highlighting (pending with rainbow-delimiters --- need to make pretty with color scheme)
-[x] Port over some keybinds from vscode
-[x] Linting and compiler errors in Rust, Python & Go
-[x] Git diffing and proper git view via lazygit
-[x] Optional copilot/Completion
-[x] hard mode -- no remaps for arrow keys
-[x] Telescope plugin to find directories and find recent directories in home for quick code opening
-[x] Learn split windows etc
-[x] Telescope plugin to find directories and find recent directories (used zoxide)
-
+- [x] Syntax Highlighting `treesitter`
+- [x] Completion
+- [x] Quickly find files
+- [x] Inline Terminal/Split view easily switchable
+- [x] Quickly create and navigate new files (this is covered with oil and nvimtree)
+- [x] Figure out how to move lines up without cut and paste (alt+up,down)
+- [x] Bracket highlighting (pending with rainbow-delimiters --- need to make pretty with color scheme)
+- [x] Port over some keybinds from vscode
+- [x] Linting and compiler errors in Rust, Python & Go
+- [x] Git diffing and proper git view via lazygit
+- [x] Optional copilot/Completion
+- [x] hard mode -- no remaps for arrow keys
+- [x] Telescope plugin to find directories and find recent directories in home for quick code opening
+- [x] Learn split windows etc
+- [x] Telescope plugin to find directories and find recent directories (used zoxide)
+- [ ] Keyboard shortcut to comment out stuff
+- [ ] Git fugitive for git ops
+- [ ] Command window popup
 

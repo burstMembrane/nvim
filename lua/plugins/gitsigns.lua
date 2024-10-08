@@ -5,12 +5,13 @@ local M = {
 }
 M.config = function()
   local gitsigns = require "gitsigns"
+  local wk = require "which-key"
 
-  -- keymaps for gitsigns
-  vim.keymap.set("n", "<leader>tb", gitsigns.toggle_current_line_blame)
-  vim.keymap.set("n", "<leader>hd", gitsigns.diffthis)
-  vim.keymap.set("n", "<leader>gp", gitsigns.preview_hunk)
-
+  wk.add {
+    { "<leader>tb", "<cmd>Gitsigns toggle_current_line_blame<cr>", desc = "Git: Toggle Current Line Blame" },
+    { "<leader>hd", "<cmd>Gitsigns diffthis<cr>", desc = "Git: Diff" },
+    { "<leader>gp", "<cmd>Gitsigns preview_hunk<cr>", desc = "Git: Preview Hunk" },
+  }
   local icons = require "user.icons"
 
   require("gitsigns").setup {

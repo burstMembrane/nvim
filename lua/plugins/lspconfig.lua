@@ -13,8 +13,8 @@ local M = {
   },
 }
 function M.config()
-  local lspconfig = require "lspconfig"
   vim.api.nvim_create_autocmd("LspAttach", {
+
     desc = "LSP actions",
     callback = function(event)
       local opts = { buffer = event.buf }

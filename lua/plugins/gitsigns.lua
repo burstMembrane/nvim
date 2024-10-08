@@ -6,16 +6,10 @@ local M = {
 M.config = function()
   local gitsigns = require "gitsigns"
 
-  local function map(mode, l, r, opts)
-    opts = opts or {}
-    opts.buffer = bufnr
-    vim.keymap.set(mode, l, r, opts)
-  end
-
   -- keymaps for gitsigns
-  map('n', '<leader>tb', gitsigns.toggle_current_line_blame)
-  map('n', '<leader>hd', gitsigns.diffthis)
-  map('n', '<leader>gp', gitsigns.preview_hunk)
+  vim.keymap.set("n", "<leader>tb", gitsigns.toggle_current_line_blame)
+  vim.keymap.set("n", "<leader>hd", gitsigns.diffthis)
+  vim.keymap.set("n", "<leader>gp", gitsigns.preview_hunk)
 
   local icons = require "user.icons"
 

@@ -6,6 +6,16 @@ local M = {
 }
 
 function M.config()
+  require("mason").setup {
+    ui = {
+      border = "rounded",
+      icons = {
+        package_installed = "",
+        package_pending = "",
+        package_uninstalled = "",
+      },
+    },
+  }
 
   require("mason-lspconfig").setup_handlers {
     function(server_name)
@@ -21,16 +31,6 @@ function M.config()
   require("mason-lspconfig").setup {
     ensure_installed = servers,
     automatic_installation = true,
-  }
-  require("mason").setup {
-    ui = {
-      border = "rounded",
-      icons = {
-        package_installed = "",
-        package_pending = "",
-        package_uninstalled = "",
-      },
-    },
   }
 end
 

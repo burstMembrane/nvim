@@ -35,6 +35,7 @@ As an iterative approach when I find myself doing a lot of keypresses to do some
 `yykP` to yank a line and paste it up 
 `yykp` to dupe a line
 `v` for selecting a block, `V` to quick select a line
+`{}` brackets for jumping by contiguous code blocks 
 ### Commands
 
 `:w` to save

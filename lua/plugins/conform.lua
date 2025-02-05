@@ -8,13 +8,18 @@ function M.config()
   local setup = {
     format_on_save = {
       -- These options will be passed to conform.format()
-      timeout_ms = 500,
+      timeout_ms = 1000,
       lsp_format = "fallback",
+      formatters = {
+        black = {
+          prepend_args = { '--fast', '--line-length', '79' },
+        },
+      },
     },
     formatters_by_ft = {
       lua = { "stylua" },
       -- Conform will run multiple formatters sequentially
-      python = { "isort", "black" },
+      python = { "isort", "black", lsp_format = "fallback" },
       -- You can customize some of the format options for the filetype (:help conform.format)
       rust = { "rustfmt", lsp_format = "fallback" },
       -- Conform will run the first available formatter

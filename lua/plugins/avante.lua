@@ -45,8 +45,10 @@ function M.config()
     dual_boost = {
       enabled = false,
     },
+    copilot = {
+      model = "claude-3.5-sonnet",
+    },
     behaviour = {
-
       auto_suggestions = false, -- Experimental stage
       -- auto_set_highlight_group = true,
       -- auto_set_keymaps = true,
@@ -129,8 +131,6 @@ function M.config()
       throttle = 600,
     },
   }
-
-
   require("avante").setup(config)
 end
 

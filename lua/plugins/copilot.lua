@@ -10,7 +10,8 @@ end
 
 function M.config()
   local copilot = require "copilot"
-  copilot.setup {
+
+  local config ={
     suggestion = {
       enabled = true,
       auto_trigger = true,
@@ -37,6 +38,15 @@ function M.config()
       },
     },
   }
+
+
+  -- Use the global function
+  local node_exists = vim.fn.system("which node")
+  if node_exists == "" then
+    vim.g.notify_after_startup("node is not installed... skipping copilot setup", vim.log.levels.WARN)
+  else
+    copilot.setup(config)
+  end
 
   local opts = { noremap = true, silent = true }
   vim.api.nvim_set_keymap("n", "<c-s>", ":lua require('copilot.suggestion').toggle_auto_trigger()<CR>", opts)

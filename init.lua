@@ -3,8 +3,9 @@ if vim.g.vscode then
   require "liam.keymaps"
   require "liam.settings"
 else
+  require "liam.global"
   require "liam.keymaps"
   require "liam.lazy"
   require "liam.settings"
-  require "liam.telescope-zoxide"
+ 
 end

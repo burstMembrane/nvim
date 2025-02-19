@@ -24,13 +24,8 @@ function M.config()
     end,
   }
 
-  -- which servers to ensure are installed at start
-  local servers = {
-    "gopls",
-  }
 
   require("mason-lspconfig").setup {
-    ensure_installed = servers,
     automatic_installation = true,
   }
 end

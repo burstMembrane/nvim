@@ -3,7 +3,6 @@ local M = {
   event = "VeryLazy",
   dependencies = {
     "MunifTanjim/nui.nvim",
-    -- "rcarriga/nvim-notify",
   },
 }
 
@@ -28,6 +27,11 @@ function M.config()
         },
         view = "mini",
       },
+
+    },
+    notify = {
+      enabled = false,
+      view = "mini",
     },
     presets = {
       bottom_search = true,

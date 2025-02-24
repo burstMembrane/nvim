@@ -24,7 +24,6 @@ This repo will serve as a rekindling of my bare love of coding, and I will be wo
 - [x] Telescope plugin to find directories and find recent directories in home for quick code opening
 - [x] Learn split windows etc
 - [x] Telescope plugin to find directories and find recent directories (used zoxide)
-- [ ] Keyboard shortcut to comment out stuff
-- [ ] Git fugitive for git ops
-- [ ] Command window popup
+- [x] Keyboard shortcut to comment out stuff
+- [x] Command window popup
 

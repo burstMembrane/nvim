@@ -1,7 +1,8 @@
 if vim.g.vscode then
   -- VSCode extension
-  require "liam.keymaps"
+  -- require "liam.keymaps"
   require "liam.settings"
+  require "vscodenvim.keymaps"
   -- require "liam.lazy.treesitter"
   -- require "liam.lazy.lspconfig"
 else

@@ -3,7 +3,7 @@ local m = {}
 local augroup = vim.api.nvim_create_augroup
 local keymap = vim.api.nvim_set_keymap
 m.my_vscode = augroup('myvscode', {})
-
+local vscode = require('vscode')
 vim.filetype.add {
   pattern = {
     ['.*%.ipynb.*'] = 'python',
@@ -76,5 +76,11 @@ keymap('n', '<c-h>', notify 'workbench.action.focusLeftGroup', { silent = true }
 keymap('n', '<c-j>', notify 'workbench.action.focusBelowGroup', { silent = true })
 keymap('n', '<c-k>', notify 'workbench.action.focusAboveGroup', { silent = true })
 keymap('n', '<c-l>', notify 'workbench.action.focusRightGroup', { silent = true })
+vim.keymap.set({ "n", "x" }, "<leader>r", function()
+  vscode.with_insert(function()
+    vscode.action("editor.action.refactor")
+  end)
+end)
 
+-- open command with substitution
 return m

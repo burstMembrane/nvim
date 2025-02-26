@@ -13,7 +13,6 @@ map("n", "<M-Down>", "ddp", { noremap = false, silent = true })
 map("n", "<C-a>", "ggVG", { noremap = true, silent = true })
 map("n", "<C-x>", "x", { noremap = true, silent = true })
 map("n", "<C-d>", "yyp", { noremap = false, silent = true })
-
 -- set CTRL+SHIFT+C to copy and CTRL+SHIFT+V to paste
 map("v", "<C-S-c>", '"+y', { noremap = false, silent = true })
 map("n", "<C-S-p>", '"+p', { noremap = false, silent = true })

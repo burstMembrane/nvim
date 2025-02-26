@@ -9,42 +9,72 @@ vim.filetype.add {
     ['.*%.ipynb.*'] = 'python',
   },
 }
+
 local function notify(cmd)
-  return string.format("<cmd>call VSCodeNotify('%s')<CR>", cmd)
+  return string.format("<cmd>call VSCodeNotify('%s')<cr>", cmd)
 end
 
 local function v_notify(cmd)
-  return string.format("<cmd>call VSCodeNotifyVisual('%s', 1)<CR>", cmd)
+  return string.format("<cmd>call VSCodeNotifyVisual('%s', 1)<cr>", cmd)
 end
--- save file with leader weditor.action.blockComment
+
+-- Save file
 keymap('n', '<leader>w', notify 'workbench.action.files.save', { silent = true })
-keymap('n', '<leader>aa', notify 'workbench.panel.chat', { silent = true })
-keymap('n', '<leader>xx', notify 'workbench.actions.view.problems', { silent = true }) -- language diagnostics
+
+-- Problems (Diagnostics)
+keymap('n', '<leader>xx', notify 'workbench.action.problems.focus', { silent = true })
+
+-- Go to definition
 keymap('n', '<leader>gd', notify 'editor.action.revealDefinition', { silent = true })
+
+-- Rename
 keymap('n', '<leader>rn', notify 'editor.action.rename', { silent = true })
-keymap('n', '<leader>ff', notify 'workbench.action.quickOpen', { silent = true })         -- find files
-keymap('n', '<leader>cw', notify 'workbench.action.closeActiveEditor', { silent = true }) -- language code actions
-keymap('n', '<leader>q', notify 'workbench.action.closeActiveEditor', { silent = true })  -- close the active editor
--- keymap('n', '<leader>fr', notify 'workbench.action.findInFiles', { silent = true })       -- use ripgrep to search files
-keymap('n', '<leader>/', notify 'editor.action.commentLine', { silent = true })           -- comment the current line
-keymap('v', '<leader>/', notify 'editor.action.commentLine', { silent = true })           -- comment the current line
-keymap('n', '<leader>ft', notify 'periscope.search', { silent = true })                   -- use ripgrep to search files
+
+-- Find files
+keymap('n', '<leader>ff', notify 'workbench.action.quickOpen', { silent = true })
+
+-- Close editor
+keymap('n', '<leader>q', notify 'workbench.action.closeActiveEditor', { silent = true })
+
+-- Search in files
+keymap('n', '<leader>fr', notify 'workbench.action.findInFiles', { silent = true })
+
+-- Comment toggling
+keymap('n', '<leader>/', notify 'editor.action.commentLine', { silent = true })
+keymap('v', '<leader>/', notify 'editor.action.commentLine', { silent = true })
+
+-- Sidebar toggling
 keymap('n', '<leader>e', notify 'workbench.action.toggleSidebarVisibility', { silent = true })
 keymap('n', '<leader>ex', notify 'workbench.view.explorer', { silent = true })
-keymap('n', '<leader>fe', notify 'workbench.action.focusActiveEditorGroup', { silent = true })  -- focus editor
-keymap('n', '<leader>th', notify 'workbench.action.toggleAuxiliaryBar', { silent = true })      -- toggle docview (help page)
-keymap('n', '<leader>tp', notify 'workbench.action.togglePanel', { silent = true })
-keymap('n', '<leader>fc', notify 'workbench.action.showcommands', { silent = true })            -- find commands
-keymap('n', '<leader>tt', notify 'workbench.action.terminal.toggleTerminal', { silent = true }) -- terminal window
 
-keymap('v', '<leader>fm', v_notify 'editor.action.formatselection', { silent = true })
+-- Focus editor
+-- keymap('n', '<leader>fe', notify 'workbench.action.focusActiveEditorGroup', { silent = true })
+keymap('n', '<leader>fe', notify 'workbench.action.focusFirstEditorGroup', { silent = true })
+-- Toggle help/doc view (Activity Bar)
+keymap('n', '<leader>th', notify 'workbench.action.toggleActivityBarVisibility', { silent = true })
+
+-- Toggle panel
+keymap('n', '<leader>tp', notify 'workbench.action.togglePanel', { silent = true })
+
+-- Show command palette
+keymap('n', '<leader>fc', notify 'workbench.action.showCommands', { silent = true })
+
+-- Toggle terminal
+keymap('n', '<leader>tt', notify 'workbench.action.terminal.toggleTerminal', { silent = true })
+
+-- Format selection
+keymap('v', '<leader>fm', v_notify 'editor.action.formatSelection', { silent = true })
+
+-- Refactor
 keymap('v', '<leader>ca', v_notify 'editor.action.refactor', { silent = true })
+
+-- Find command palette in visual mode
 keymap('v', '<leader>fc', v_notify 'workbench.action.showCommands', { silent = true })
 
 -- Navigation between editor groups (panes)
-keymap('n', '<C-h>', notify 'workbench.action.focusLeftGroup', { silent = true })
-keymap('n', '<C-j>', notify 'workbench.action.focusBelowGroup', { silent = true })
-keymap('n', '<C-k>', notify 'workbench.action.focusAboveGroup', { silent = true })
-keymap('n', '<C-l>', notify 'workbench.action.focusRightGroup', { silent = true })
+keymap('n', '<c-h>', notify 'workbench.action.focusLeftGroup', { silent = true })
+keymap('n', '<c-j>', notify 'workbench.action.focusBelowGroup', { silent = true })
+keymap('n', '<c-k>', notify 'workbench.action.focusAboveGroup', { silent = true })
+keymap('n', '<c-l>', notify 'workbench.action.focusRightGroup', { silent = true })
 
 return m

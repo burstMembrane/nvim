@@ -16,7 +16,7 @@ end
 local function v_notify(cmd)
   return string.format("<cmd>call VSCodeNotifyVisual('%s', 1)<CR>", cmd)
 end
--- save file with leader w
+-- save file with leader weditor.action.blockComment
 keymap('n', '<leader>w', notify 'workbench.action.files.save', { silent = true })
 keymap('n', '<leader>aa', notify 'workbench.panel.chat', { silent = true })
 keymap('n', '<leader>xx', notify 'workbench.actions.view.problems', { silent = true }) -- language diagnostics
@@ -26,6 +26,8 @@ keymap('n', '<leader>ff', notify 'workbench.action.quickOpen', { silent = true }
 keymap('n', '<leader>cw', notify 'workbench.action.closeActiveEditor', { silent = true }) -- language code actions
 keymap('n', '<leader>q', notify 'workbench.action.closeActiveEditor', { silent = true })  -- close the active editor
 -- keymap('n', '<leader>fr', notify 'workbench.action.findInFiles', { silent = true })       -- use ripgrep to search files
+keymap('n', '<leader>/', notify 'editor.action.commentLine', { silent = true })           -- comment the current line
+keymap('v', '<leader>/', notify 'editor.action.commentLine', { silent = true })           -- comment the current line
 keymap('n', '<leader>ft', notify 'periscope.search', { silent = true })                   -- use ripgrep to search files
 keymap('n', '<leader>e', notify 'workbench.action.toggleSidebarVisibility', { silent = true })
 keymap('n', '<leader>ex', notify 'workbench.view.explorer', { silent = true })

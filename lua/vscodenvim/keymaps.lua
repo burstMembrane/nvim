@@ -36,9 +36,6 @@ keymap('n', '<leader>ff', notify 'workbench.action.quickOpen', { silent = true }
 -- Close editor
 keymap('n', '<leader>q', notify 'workbench.action.closeActiveEditor', { silent = true })
 
--- Search in files
-keymap('n', '<leader>fr', notify 'workbench.action.findInFiles', { silent = true })
-
 -- Comment toggling
 keymap('n', '<leader>/', notify 'editor.action.commentLine', { silent = true })
 keymap('v', '<leader>/', notify 'editor.action.commentLine', { silent = true })
@@ -48,8 +45,8 @@ keymap('n', '<leader>e', notify 'workbench.action.toggleSidebarVisibility', { si
 keymap('n', '<leader>ex', notify 'workbench.view.explorer', { silent = true })
 
 -- Focus editor
--- keymap('n', '<leader>fe', notify 'workbench.action.focusActiveEditorGroup', { silent = true })
 keymap('n', '<leader>fe', notify 'workbench.action.focusFirstEditorGroup', { silent = true })
+keymap('n', '<leader>ft', notify 'periscope.search', { silent = true })
 -- Toggle help/doc view (Activity Bar)
 keymap('n', '<leader>th', notify 'workbench.action.toggleActivityBarVisibility', { silent = true })
 
@@ -65,12 +62,17 @@ keymap('n', '<leader>tt', notify 'workbench.action.terminal.toggleTerminal', { s
 -- Format selection
 keymap('v', '<leader>fm', v_notify 'editor.action.formatSelection', { silent = true })
 
+-- Toggle chat
+keymap('n', '<leader>aa', notify 'workbench.panel.chatEditing', { silent = true })
+
+
+-- keymap('n', '<leader>aa', notify 'workbench.panel.chat', { silent = true })
 -- Refactor
 keymap('v', '<leader>ca', v_notify 'editor.action.refactor', { silent = true })
 
 -- Find command palette in visual mode
 keymap('v', '<leader>fc', v_notify 'workbench.action.showCommands', { silent = true })
-
+keymap('n', '<leader>fd', notify 'workbench.action.openRecent', { silent = true })
 -- Navigation between editor groups (panes)
 keymap('n', '<c-h>', notify 'workbench.action.focusLeftGroup', { silent = true })
 keymap('n', '<c-j>', notify 'workbench.action.focusBelowGroup', { silent = true })
@@ -81,6 +83,20 @@ vim.keymap.set({ "n", "x" }, "<leader>r", function()
     vscode.action("editor.action.refactor")
   end)
 end)
+-- workbench.action.toggleZenMode
+keymap('n', '<leader>zz', notify 'workbench.action.toggleZenMode', { silent = true })
+-- switch tabs with <leader>#
+--
+--workbench.action.openEditorAtIndex1
+keymap('n', '<leader>1', notify 'workbench.action.openEditorAtIndex1', { silent = true })
+keymap('n', '<leader>2', notify 'workbench.action.openEditorAtIndex2', { silent = true })
+keymap('n', '<leader>3', notify 'workbench.action.openEditorAtIndex3', { silent = true })
+keymap('n', '<leader>4', notify 'workbench.action.openEditorAtIndex4', { silent = true })
+keymap('n', '<leader>5', notify 'workbench.action.openEditorAtIndex5', { silent = true })
+keymap('n', '<leader>6', notify 'workbench.action.openEditorAtIndex6', { silent = true })
+keymap('n', '<leader>7', notify 'workbench.action.openEditorAtIndex7', { silent = true })
+keymap('n', '<leader>8', notify 'workbench.action.openEditorAtIndex8', { silent = true })
+keymap('n', '<leader>9', notify 'workbench.action.openEditorAtIndex9', { silent = true })
 
 -- open command with substitution
 return m

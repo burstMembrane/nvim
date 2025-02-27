@@ -8,7 +8,6 @@ vim.api.nvim_create_autocmd("FileType", {
       return
     end
 
-    -- Ensure LSP configuration is loaded only once
     if not require('lspconfig.configs').fzf_ls then
       vim.notify("fzf_ls is installed... setting up", vim.log.levels.INFO)
       require('lspconfig.configs').fzf_ls = {

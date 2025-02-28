@@ -135,7 +135,7 @@ function M.config()
   -- check if node is installed
   local node_exists = vim.fn.system("which node")
   if node_exists == "" then
-    vim.g.notify_after_startup("[Avante] node is not installed... skipping avante setup", vim.log.levels.WARN)
+    vim.g.notify_post_startup("[Avante] node is not installed... skipping avante setup", vim.log.levels.WARN)
   else
     require("avante").setup(config)
   end

@@ -3,6 +3,8 @@ if vim.g.vscode then
   -- require "liam.keymaps"
   require "liam.settings"
   require "vscodenvim.keymaps"
+  require "vscodenvim.settings"
+  require "liam.lazy.midnight"
   -- require "liam.lazy.treesitter"
   -- require "liam.lazy.lspconfig"
 else

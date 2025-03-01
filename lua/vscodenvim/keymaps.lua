@@ -63,7 +63,7 @@ keymap('n', '<leader>tt', notify 'workbench.action.terminal.toggleTerminal', { s
 keymap('v', '<leader>fm', v_notify 'editor.action.formatSelection', { silent = true })
 
 -- Toggle chat
-keymap('n', '<leader>aa', notify 'workbench.panel.chatEditing', { silent = true })
+keymap('n', '<leader>aa', notify 'workbench.panel.chat', { silent = true })
 
 
 -- keymap('n', '<leader>aa', notify 'workbench.panel.chat', { silent = true })
@@ -83,6 +83,7 @@ vim.keymap.set({ "n", "x" }, "<leader>r", function()
     vscode.action("editor.action.refactor")
   end)
 end)
+
 -- workbench.action.toggleZenMode
 keymap('n', '<leader>zz', notify 'workbench.action.toggleZenMode', { silent = true })
 -- switch tabs with <leader>#

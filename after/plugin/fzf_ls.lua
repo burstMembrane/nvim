@@ -1,3 +1,8 @@
+if vim.g.vscode then
+  return
+end
+
+
 vim.api.nvim_create_autocmd("FileType", {
   pattern = { "sh", "bash" },
   callback = function()

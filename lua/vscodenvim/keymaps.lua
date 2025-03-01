@@ -26,7 +26,6 @@ keymap('n', '<leader>xx', notify 'workbench.action.problems.focus', { silent = t
 
 -- Go to definition
 keymap('n', '<leader>gd', notify 'editor.action.revealDefinition', { silent = true })
-
 -- Rename
 keymap('n', '<leader>rn', notify 'editor.action.rename', { silent = true })
 

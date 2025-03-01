@@ -35,6 +35,17 @@ function M.config()
   local wk = require "which-key"
 
   wk.add {
+    { "<leader>q",  "<cmd>q<cr>",                                desc = "Quit" },  -- Quit
+    { "<leader>w",  "<cmd>w<cr>",                                desc = "Write" }, -- Write
+    { "<leader>sa", ":normal ggVG<cr>",                          desc = "Select All" },
+    { "<leader>sl", ":normal 0v$<cr>",                           desc = "Select Line" },
+    { "<leader>d",  "<cmd>lua show_diagnostics()<cr>",           desc = "show error or warning under cursor" }, -- Show diagnostics
+    { "<leader>td", "<cmd>lua toggle_diagnostics()<cr>",         desc = "toggle inline diagnostics" },
+    { "<leader>cw", "<cmd>BufferClose<cr>",                      desc = "Close Current Window (Tab)" },
+    { "<leader>ti", "<cmd>lua toggle_inlay_hints()<cr>",         desc = "Toggle LSP Inlay Hints" },
+    { "<leader>tm", "<cmd>lua toggle_inline_virtual_text()<cr>", desc = "Toggle LSP Virtual Text" },
+    { "<leader>ai", "<cmd>Copilot toggle<CR>",                   desc = "Toggle Copilot" },
+    { "<leader>rn", "<cmd>lua vim.lsp.buf.rename()<CR>",         desc = "Rename Symbol" },
     { "<leader>q",  "<CMD>q<CR>",                                desc = "Quit" },
     { "<leader>w",  "<CMD>w<CR>",                                desc = "Write" },
     { "<leader>sa", ":normal ggVG<CR>",                          desc = "Select All" },

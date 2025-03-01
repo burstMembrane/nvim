@@ -11,7 +11,7 @@ end
 function M.config()
   local copilot = require "copilot"
 
-  local config ={
+  local config = {
     suggestion = {
       enabled = true,
       auto_trigger = true,
@@ -43,7 +43,7 @@ function M.config()
   -- Use the global function
   local node_exists = vim.fn.system("which node")
   if node_exists == "" then
-    vim.g.notify_after_startup("node is not installed... skipping copilot setup", vim.log.levels.WARN)
+    vim.g.notify_post_startup("node is not installed... skipping copilot setup", vim.log.levels.WARN)
   else
     copilot.setup(config)
   end

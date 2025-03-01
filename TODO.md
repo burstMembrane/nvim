@@ -26,4 +26,4 @@ This repo will serve as a rekindling of my bare love of coding, and I will be wo
 - [x] Telescope plugin to find directories and find recent directories (used zoxide)
 - [x] Keyboard shortcut to comment out stuff
 - [x] Command window popup
-
+- [ ] keybinds to create splits easily

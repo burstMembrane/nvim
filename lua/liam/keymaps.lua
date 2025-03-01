@@ -1,6 +1,5 @@
 -- KEYMAPS
 -- mousemenu
-
 local map = vim.keymap.set
 -- map mousemenu
 map("n", "<RightMouse>", "<cmd>:popup mousemenu<CR>")
@@ -17,7 +16,6 @@ map("n", "<C-d>", "yyp", { noremap = false, silent = true })
 map("v", "<C-S-c>", '"+y', { noremap = false, silent = true })
 map("n", "<C-S-p>", '"+p', { noremap = false, silent = true })
 map("n", "<C-z>", '"u', { noremap = false, silent = true })
-
 -- set CTRL+SHIFT+X to cut
 map("v", "<C-S-x>", '"+d', { noremap = false, silent = true })
 

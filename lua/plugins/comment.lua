@@ -15,7 +15,6 @@ function M.config()
     { "<leader>/", "<Plug>(comment_toggle_linewise_current)", desc = "Comment" },
     { "<leader>/", "<Plug>(comment_toggle_linewise_visual)", desc = "Comment", mode = "v" },
   }
-  -- Toggle current line (linewise) using C-/
   vim.keymap.set("n", "<C-/>", "<Plug>(comment_toggle_linewise_current)")
   vim.keymap.set("v", "<C-/>", "<Plug>(comment_toggle_linewise_visual)")
   require("ts_context_commentstring").setup {

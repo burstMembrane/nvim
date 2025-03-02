@@ -63,7 +63,8 @@ keymap('v', '<leader>fm', v_notify 'editor.action.formatSelection', { silent = t
 
 -- Toggle chat
 keymap('n', '<leader>aa', notify 'workbench.panel.chat', { silent = true })
-
+-- Git: Open Changes
+keymap('n', '<leader>gc', notify 'git.viewChanges', { silent = true })
 
 -- keymap('n', '<leader>aa', notify 'workbench.panel.chat', { silent = true })
 -- Refactor

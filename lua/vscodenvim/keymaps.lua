@@ -82,7 +82,8 @@ vim.keymap.set({ "n", "x" }, "<leader>r", function()
     vscode.action("editor.action.refactor")
   end)
 end)
-
+-- markdown.showPreview
+keymap('n', '<leader>md', notify 'markdown.showPreview', { silent = true })
 -- workbench.action.toggleZenMode
 keymap('n', '<leader>zz', notify 'workbench.action.toggleZenMode', { silent = true })
 -- switch tabs with <leader>#

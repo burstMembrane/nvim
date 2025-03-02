@@ -1,6 +1,6 @@
--- local M = { dir = '/Users/liampower/darkplus-black.nvim/', dev = true, lazy = false, priority = 2000,
--- }
-local M = { 'burstMembrane/darkplus-black.nvim', dev = false, lazy = false, priority = 2000,
+-- local M = { dir = '/Users/liampower/Projects//darkplus-black.nvim/', dev = true, lazy = false, priority = 2000,
+
+local M = { 'burstMembrane/darkplus-black.nvim', dev = true, lazy = false, priority = 2000,
 }
 
 function M.config()
